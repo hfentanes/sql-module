@@ -4,12 +4,12 @@
 
 CREATE TABLE Books (
     book_id INT PRIMARY KEY,
-    title VARCHAR(60),
-    author VARCHAR(60),
+    title VARCHAR(60) NOT NULL,
+    author VARCHAR(60) NOT NULL,
     genre VARCHAR(20),
     published_year INT,
-    isbn VARCHAR(13),
-    price FLOAT,
+    isbn VARCHAR(13) UNIQUE,
+    price DECIMAL(10, 2),
     rating FLOAT,
     stock_count INT
 )
